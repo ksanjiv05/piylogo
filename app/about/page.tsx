@@ -10,13 +10,13 @@ import pic from "@/app/@resources/img/pic.jpg";
 
 function About() {
   return (
-    <div className="grid grid-cols-3 gap-8 ">
+    <div className="grid grid-cols-3 gap-2 ">
       <div className="h-[34vw] ">
         <Image
           src={pic}
           alt="arrow-right"
-          objectFit="cover"
-          fill="cover"
+          // objectFit="cover"
+          // fill="cover"
           className=" h-full w-full"
         />
       </div>

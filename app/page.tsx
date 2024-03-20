@@ -13,8 +13,14 @@ import phone from "@/app/@resources/icons/Phone.png"
 import share from "@/app/@resources/icons/Share.png"
 import dloc from "@/app/@resources/icons/Direction.png"
 import location from "@/app/@resources/icons/location.png"
+import backGround from "@/app/@resources/img/back.jpeg"
+import { Suspense } from "react";
 
-
+import fbw from "@/app/@resources/icons/Facebook w.png"
+import instaw from "@/app/@resources/icons/Insta w.png"
+import gamilw from "@/app/@resources/icons/Facebook w-1.png"
+import youtubew from "@/app/@resources/icons/Youtube w.png"
+import linkedIndw from "@/app/@resources/icons/Linked in w.png"
 
 
 
@@ -22,27 +28,36 @@ import location from "@/app/@resources/icons/location.png"
 export default function Home() {
   return (
     <main className="">
-      <div className="flex h-[85vh]">
+      <div className="w-full h-[85vh]">
+        <Suspense fallback={<div>Loading...</div>}>
         <video
-          className=" bg-slate-700 w-full h-full"
-          width="100%"
-          height="100%"
-          src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-          autoPlay
-          loop
-        ></video>
+        width="100%"
+        // height="100%"
+        style={{height:"82vh"}}
+        src={require("@/app/@resources/video/Art.mp4")}
+        autoPlay
+        loop={true}
+        muted={true}
+        
+      >
+      <source src={require("@/app/@resources/video/Art.mp4")} type="video/mp4" />
+      </video>
+        {/* <VideoPlayer /> */}
+        </Suspense>
       </div>
       <div className=" mx-[12vw]">
         <div className="my-[24px]">
           <Gallery />
         </div>
         <div className=" flex items-center justify-center my-[96px]">
-          <div className=" w-[45vw] h-[45vw] rounded-full bg-black flex items-center justify-center flex-col">
+            <Image src={backGround}  objectFit="cover" className=" relative w-[45vw] h-[45vw] rounded-full "  />
+          <div className=" w-[45vw] h-[45vw] rounded-full  absolute flex items-center justify-center flex-col">
+            
             <h2 className=" text-white text-5xl text-center font-bold font-ebg">
               Need a Custom <br /> Painting?
             </h2>
             <div className=" grow max-h-[8vw]"></div>
-            <div className=" w-16 h-16 flex items-center justify-center rounded-full bg-white">
+            <div className=" w-16 h-16 bg-white flex items-center justify-center rounded-full">
               <Image src={dloc} />
             </div>
           </div>
@@ -57,23 +72,24 @@ export default function Home() {
           <Contact />
         </div>
         <div className=" flex items-center justify-center my-[96px]">
-          <div className=" relative w-[45vw] h-[45vw] rounded-full bg-black flex items-center justify-center flex-col">
+          <div className=" relative w-[45vw] h-[45vw] rounded-full flex items-center justify-center flex-col">
+            <Image src={backGround} layout="fill" objectFit="cover" className=" relative w-[45vw] h-[45vw] rounded-full -z-10" />
             <div className=" w-[20vw] h-[10vw] absolute top-10">
               <div className="flex h-[10vw] items-center justify-center">
                 <div className="mx-2">
-                  <Image className="w-8" src={fb} />
+                  <Image className="w-8" src={fbw} />
                 </div>
                 <div className="mx-2">
-                   <Image className="w-8" src={insta} />
+                   <Image className="w-8" src={instaw} />
                 </div>
                 <div className="mx-2">
-                   <Image className="w-8" src={gamil} />
+                   <Image className="w-8" src={gamilw} />
                 </div>
                 <div className="mx-2">
-                   <Image className="w-8" src={youtube} />
+                   <Image className="w-8" src={youtubew} />
                 </div>
                 <div className="mx-2">
-                   <Image className="w-8" src={linkedInd} />
+                   <Image className="w-8" src={linkedIndw} />
                 </div>
               </div>
             </div>
