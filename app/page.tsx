@@ -47,7 +47,7 @@ export default function Home() {
         </Suspense>
       </div>
       <div className=" mx-[12vw]">
-        <div id="gallary" className="my-[24px]">
+        <div id="gallary" style={{scrollMargin: "18vh"}} className="my-[24px]">
           <Gallery setImgReq={setImgReq} />
         </div>
         <div className=" flex items-center justify-center my-[96px]">
@@ -69,10 +69,10 @@ export default function Home() {
         <div id="services" className="   h-[55vw] bg-black overflow-hidden">
           <Service />
         </div>
-        <div id="piy" className="h-[34vw] my-[96px] ">
+        <div id="piy" style={{scrollMargin: "19vh"}} className="h-[34vw] my-[96px] ">
           <About />
         </div>
-        <div id="contact" className="   h-[55vw] ">
+        <div id="contact" style={{scrollMargin: "15vh"}} className="   h-[55vw] ">
           <Contact imgReq={imgReq} />
         </div>
         <div className=" flex items-center justify-center my-[96px]">
