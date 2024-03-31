@@ -24,9 +24,20 @@ const paintingArry = [
  
 ];
 
-function Gallery() {
+function Gallery({setImgReq}) {
   const [open, setOpen] = React.useState(false);
   const [image, setImage] = React.useState(undefined);
+
+
+    const goToSection = (painting:any,id: any) => {
+    setImgReq(painting)
+    if (document.querySelector(id)) {
+      console.log(id)
+      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+      // document.querySelector(id).scrollTo({ top: 200,behavior: "smooth" })
+      // window&&window.scrollBy(0, -300);
+    }
+  };
 
   const handleDialog = (img) => {
     setImage(img);
@@ -36,7 +47,7 @@ function Gallery() {
   return (
     <>
       <Dialog open={open} setOpen={setOpen} image={image} />
-      <div id="#gallary" className="grid grid-cols-2 gap-[24px] ">
+      <div className="grid grid-cols-2 gap-[24px] ">
         {/* <div className="h-[36vw] rounded-2xl relative group overflow-hidden shadow-lg">
           <div
             className="h-[36vw] overflow-hidden"
@@ -118,8 +129,8 @@ function Gallery() {
                   <p className=" font-lato">description</p>
                 </div>
                 <div>
-                  <div className="px-[18px] py-2 rounded-full bg-slate-600 uppercase text-xl text-white font-lato cursor-pointer">
-                    Request
+                  <div onClick={()=>goToSection(painting,"#contact")} className="  w-44 py-2 rounded-full bg-[#445975] uppercase text-xl text-white font-lato cursor-pointer text-center">
+                    {painting.type === 1 ? "Buy" : "Custom Art"}
                   </div>
                 </div>
               </div>

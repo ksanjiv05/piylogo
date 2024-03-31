@@ -12,11 +12,11 @@ import { AnyAaaaRecord } from "dns";
 
 function Navbar() {
   const goToSection = (id: any) => {
-      console.log("-",document.querySelector(id))
-
     if (document.querySelector(id)) {
       console.log(id)
-      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+      document.querySelector(id).scrollIntoView({ behavior: "smooth",marginTop: 400});
+      // document.querySelector(id).scrollTo({ top: 200,behavior: "smooth" })
+      // window&&window.scrollBy(0, -300);
     }
   };
 
@@ -24,26 +24,26 @@ function Navbar() {
 
   return (
     <div className="sticky top-0 bg-white  z-[1]">
-      <div className="flex h-[12vh] items-center  justify-center">
+      <div className="flex h-[8vh] items-end  justify-center">
         <h1 className=" text-3xl uppercase font-lato font-bold">Piy</h1>
       </div>
-      <div className="grid grid-cols-3 gap-2 pb-4 px-6 place">
+      <div className="grid grid-cols-3 gap-2 mt-2 pb-4 px-6 place">
         <div className="mt-2">
           <div className="flex items-center justify-start">
             <div className="mx-1">
-              <Image className="w-6" src={fb} />
+              <Image className="w-6" src={fb} title="facebook" />
             </div>
             <div className="mx-1">
-              <Image className="w-6" src={insta} />
+              <Image className="w-6" src={insta} title="instagram" />
             </div>
             <div className="mx-1">
-              <Image className="w-6" src={gamil} />
+              <Image className="w-6" src={gamil} title="gmail" />
             </div>
             <div className="mx-1">
-              <Image className="w-6" src={youtube} />
+              <Image className="w-6" src={youtube} title="youtube" />
             </div>
             <div className="mx-1">
-              <Image className="w-6" src={linkedInd} />
+              <Image className="w-6" src={linkedInd} title="linkedin" />
             </div>
             {/* <div className="mx-2">
             <FaFacebook size={28} className=" text-slate-500"/>
@@ -67,15 +67,15 @@ function Navbar() {
             <div onClick={()=>goToSection("#gallary")} className="mx-3 uppercase font-lato cursor-pointer ">
               gallery
             </div>
-            <div className="mx-3 uppercase font-lato ">services</div>
-            <div className="mx-3 uppercase font-lato ">piy</div>
-            <div className="mx-3 uppercase font-lato ">contact</div>
+            <div onClick={()=>goToSection("#services")}  className="mx-3 uppercase font-lato cursor-pointer ">services</div>
+            <div onClick={()=>goToSection("#piy")}  className="mx-3 uppercase font-lato cursor-pointer">piy</div>
+            <div onClick={()=>goToSection("#contact")}  className="mx-3 uppercase font-lato cursor-pointer">contact</div>
           </div>
         </div>
         <div className="">
           <div className="flex items-center justify-end">
-            <div className=" uppercase border-2 px-[12px] py-[5px] rounded-full cursor-pointer font-lato">
-              request commission
+            <div onClick={()=>goToSection("#contact")} className=" uppercase border-2 px-[12px] py-[5px] rounded-full cursor-pointer font-lato">
+              Custom Art
             </div>
           </div>
         </div>

@@ -2,8 +2,17 @@
 import React from "react";
 import dr from "@/app/@resources/icons/Direction.png";
 import Image from "next/image";
+import blur from "@/app/@resources/img/blur.jpg";
 
-function Contact() {
+type ContactProps = {
+  id: number;
+  src: any;
+  alt: string;
+  name: string;
+  type: number;
+};
+
+function Contact({ imgReq }: ContactProps) {
   const [data, setData] = React.useState({});
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,10 +38,22 @@ function Contact() {
       alert("Email not Sent");
     }
   };
+  React.useEffect(() => {
+    if (imgReq) {
+      console.log(imgReq);
+      setData({
+        ...data,
+        message: `I want to buy this painting " ${imgReq.name} - ${imgReq.id} "`,
+      });
+    }
+  }, [imgReq]);
 
   return (
-    <div className='w-full h-[55vw] py-[4vw] overflow-hidden  flex flex-col items-center  bg-black bg-[url("/img/contact-texture.svg")]'>
-      <div className=" w-[55%] p-12">
+    <>
+   
+    <div className='w-full h-[55vw] relative overflow-hidden  flex flex-col items-center justify-center  ' style={{justifyContent:"center"}}>
+       <Image src={blur} className="h-[55vw]  absolute -z-10" />
+      <div className=" w-[55%] p-12 ">
         <h1 className=" text-white text-5xl mb-[36px] font-ebg font-semibold">
           Contact
         </h1>
@@ -101,7 +122,7 @@ function Contact() {
               className="text-white font-lato w-6 h-8 "
             />
             <label className=" text-white font-lato text-xl mx-2">
-              Project/Business
+              Inquire
             </label>
           </div>
         </div>
@@ -113,6 +134,7 @@ function Contact() {
           rows={3}
           name="message"
           onChange={onChange}
+          value={data?.message}
           className=" w-[100%]"
         ></textarea>
 
@@ -125,6 +147,8 @@ function Contact() {
         </div>
       </div>
     </div>
+    </>
+
   );
 }
 

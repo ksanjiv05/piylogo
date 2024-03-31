@@ -6,12 +6,12 @@ import gamil from "@/app/@resources/icons/Gmail.png";
 import youtube from "@/app/@resources/icons/Youtube.png";
 import linkedInd from "@/app/@resources/icons/Linked in.png";
 import Image from "next/image";
-import pic from "@/app/@resources/img/pic.jpg";
+import pic from "@/app/@resources/img/pic2.jpg";
 
 function About() {
   return (
-    <div className="grid grid-cols-3 gap-2 ">
-      <div className="h-[34vw] ">
+    <div className="grid grid-cols-2 gap-4 ">
+      <div className="h-[34vw] w-[34vw] ">
         <Image
           src={pic}
           alt="arrow-right"
@@ -20,8 +20,8 @@ function About() {
           className=" h-full w-full"
         />
       </div>
-      <div className="h-[34vw] col-span-2  px-8">
-        <h1 className=" text-5xl font-bold py-[40px] font-ebg">Piy</h1>
+      <div className="h-[34vw]   px-8">
+        <h1 className=" text-5xl font-bold py-[40px] font-ebg">Piyush Gupta </h1>
         <p className=" font-lato tracking-wider">
           Step into the evocative world of Piyush gupta or Piy, a visionary
           graduate from NIFT with over a decade of artistic mastery. With a
@@ -40,19 +40,19 @@ function About() {
 
         <div className="flex flex-1 mt-[40px] items-center justify-start">
           <div className="mx-1">
-            <Image className="w-6" src={fb} />
+            <Image className="w-6" src={fb} title="facebook" />
           </div>
           <div className="mx-1">
-            <Image className="w-6" src={insta} />
+            <Image className="w-6" src={insta} title="instagram" />
           </div>
           <div className="mx-1">
-            <Image className="w-6" src={gamil} />
+            <Image className="w-6" src={gamil} title="gmail" />
           </div>
           <div className="mx-1">
-            <Image className="w-6" src={youtube} />
+            <Image className="w-6" src={youtube}  title="youtube"/>
           </div>
           <div className="mx-1">
-            <Image className="w-6" src={linkedInd} />
+            <Image className="w-6" src={linkedInd}  title="linkedin"/>
           </div>
         </div>
       </div>
