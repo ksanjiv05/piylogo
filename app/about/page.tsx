@@ -1,10 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import fb from "@/app/@resources/icons/fb.png";
-import insta from "@/app/@resources/icons/Insta.png";
-import gamil from "@/app/@resources/icons/Gmail.png";
-import youtube from "@/app/@resources/icons/Youtube.png";
-import linkedInd from "@/app/@resources/icons/Linked in.png";
+// import fb from "@/app/@resources/icons/fb.png";
+// import insta from "@/app/@resources/icons/Insta.png";
+// import gamil from "@/app/@resources/icons/Gmail.png";
+// import youtube from "@/app/@resources/icons/Youtube.png";
+// import linkedInd from "@/app/@resources/icons/Linked in.png";
+import fb from "@/app/@resources/icons/fba.png";
+import insta from "@/app/@resources/icons/instaa.png";
+import gamil from "@/app/@resources/icons/gm.png";
+import youtube from "@/app/@resources/icons/yt.png";
+import linkedInd from "@/app/@resources/icons/lik.png";
 import Image from "next/image";
 import pic from "@/app/@resources/img/pic2.jpg";
 
@@ -21,7 +26,9 @@ function About() {
         />
       </div>
       <div className="h-[34vw]   px-8">
-        <h1 className=" text-5xl font-bold py-[40px] font-ebg">Piyush Gupta </h1>
+        <h1 className=" text-5xl font-bold py-[40px] font-ebg">
+          Piyush Gupta{" "}
+        </h1>
         <p className=" font-lato tracking-wider">
           Step into the evocative world of Piyush gupta or Piy, a visionary
           graduate from NIFT with over a decade of artistic mastery. With a
@@ -39,20 +46,30 @@ function About() {
         </p>
 
         <div className="flex flex-1 mt-[40px] items-center justify-start">
-          <div className="mx-1">
-            <Image className="w-6" src={fb} title="facebook" />
+          <div className="">
+            <a href="https://www.facebook.com/profile.php?id=100004291560400">
+              <Image className="w-6" src={fb} title="facebook" />
+            </a>
           </div>
-          <div className="mx-1">
-            <Image className="w-6" src={insta} title="instagram" />
+          <div className="">
+            <a href="https://www.instagram.com/piy.art/">
+              <Image className="w-6" src={insta} title="instagram" />
+            </a>
           </div>
-          <div className="mx-1">
+          <div className="mx-2">
+             <a href="mailto:piyartstudio@gmail.com">
             <Image className="w-6" src={gamil} title="gmail" />
+            </a>
           </div>
           <div className="mx-1">
-            <Image className="w-6" src={youtube}  title="youtube"/>
+            <a href="https://www.youtube.com/channel/UCSrEvTVeUboEZJDf_obFaiw">
+              <Image className="w-6" src={youtube} title="youtube" />
+            </a>
           </div>
           <div className="mx-1">
-            <Image className="w-6" src={linkedInd}  title="linkedin"/>
+            <a href="https://www.linkedin.com/company/piy-art-studio/">
+              <Image className="w-6" src={linkedInd} title="linkedin" />
+            </a>
           </div>
         </div>
       </div>

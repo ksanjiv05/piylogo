@@ -7,6 +7,12 @@ import a2 from "@/app/@resources/img/Modernart.jpg";
 
 function Service() {
   const [img, setImg] = React.useState(a1);
+  // React.useEffect(() => {
+  //   const id = setInterval(() => {
+  //     setImg(a1===img?a2:a1);
+  //   }, 1000);
+  //   return () => clearInterval(id);
+  // }, []);
   return (
     <div className=" overflow-hidden ">
       <Image src={img}  className="w-[76vw] h-[55vw]  " style={{position:"absolute", }} />
@@ -17,30 +23,36 @@ function Service() {
             <h1 className=" text-5xl font-bold text-white font-ebg">
               Services
             </h1>
-            <p className=" text-white font-ebg uppercase text-[20px]">
+            {/* <p className=" text-white font-ebg uppercase text-[20px]">
               Painting & Acrlyic
-            </p>
+            </p> */}
             <br />
             <ul className=" text-white">
-              <li onClick={()=>setImg(a1)} className=" text-[20px] font-lato my-[8px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
+              <li onClick={()=>setImg(a1)} onMouseOver={()=>setImg(a1)} className=" text-[20px] font-lato my-[8px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
                 Portrait Painting
               </li>
               <li className=" text-[20px] font-lato my-[8px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
                 Fantasy Painting
               </li>
               <li className=" text-[20px] font-lato my-[8px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
-                Gods & Avatars
+                Gods & Goddess
               </li>
-              <li onClick={()=>setImg(a2)} className=" text-[20px] font-lato my-[8px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
+              <li onClick={()=>setImg(a2)} onMouseOver={()=>setImg(a2)} className=" text-[20px] font-lato my-[8px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
                 Modern Art
               </li>
+               <li className=" text-[20px] font-lato my-[8px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
+                Installation Art
+              </li>
+              <li className=" text-[20px] font-lato my-[8px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
+                Handicraft
+              </li>
               <br />
-              <li className="py-2 bg-white rounded-full uppercase text-black w-[100px] font-lato text-center">
+              <li className="py-2 bg-white rounded-full font-bold uppercase text-black w-[100px] font-lato text-center">
                 Contact 
               </li>
             </ul>
           </div>
-        </div>
+        </div>ß
       </div>
     </div>
   );

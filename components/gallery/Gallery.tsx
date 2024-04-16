@@ -31,6 +31,8 @@ function Gallery({setImgReq}) {
 
     const goToSection = (painting:any,id: any) => {
     setImgReq(painting)
+    setImgReq(painting)
+
     if (document.querySelector(id)) {
       console.log(id)
       document.querySelector(id).scrollIntoView({ behavior: "smooth" });
