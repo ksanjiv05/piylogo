@@ -7,25 +7,25 @@ import localFont from 'next/font/local'
 const lato = localFont({
   src: [
     {
-      path: '../app/@resources/fonts/Lato-Light.ttf',
+      path: '../app/resources/fonts/Lato-Light.ttf',
       weight: '400',
       style: 'normal',
       
     },
     {
-      path: '../app/@resources/fonts/Lato-Black.ttf',
+      path: '../app/resources/fonts/Lato-Black.ttf',
       weight: '600',
       style: 'medium',
       
     },
      {
-      path: '../app/@resources/fonts/Lato-Bold.ttf',
+      path: '../app/resources/fonts/Lato-Bold.ttf',
       weight: '700',
       style: 'bold',
       
     },
     {
-      path: '../app/@resources/fonts/Lato-Italic.ttf',
+      path: '../app/resources/fonts/Lato-Italic.ttf',
       weight: '400',
       style: 'italic',
     },
@@ -37,12 +37,12 @@ const ebFont = localFont({
   src: [
 
     {
-      path: '../app/@resources/fonts/EBGaramond-Bold.ttf',
+      path: '../app/resources/fonts/EBGaramond-Bold.ttf',
       weight: '700',
       style: 'bold',
     },
     {
-      path: '../app/@resources/fonts/EBGaramond-Regular.ttf',
+      path: '../app/resources/fonts/EBGaramond-Regular.ttf',
       weight: '400',
       style: 'normal',
     },

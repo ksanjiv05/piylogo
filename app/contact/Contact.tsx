@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import dr from "@/app/@resources/icons/Direction.png";
+import dr from "@/app/resources/icons/Direction.png";
 import Image from "next/image";
-import blur from "@/app/@resources/img/blur.jpg";
-import success from "@/app/@resources/img/success.png";
+import blur from "@/app/resources/img/blur.jpg";
+import success from "@/app/resources/img/success.png";
 
 type ContactProps = {
   id: number;

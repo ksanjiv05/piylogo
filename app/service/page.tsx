@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import a1 from "@/app/@resources/img/PortraitPainitng.jpg";
-import a2 from "@/app/@resources/img/Modernart.jpg";
+import a1 from "@/app/resources/img/PortraitPainitng.jpg";
+import a2 from "@/app/resources/img/Modernart.jpg";
 
 
 function Service() {

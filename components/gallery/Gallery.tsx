@@ -3,8 +3,8 @@
 import Image from "next/image";
 import React from "react";
 import Dialog from "../dialog/Dialog";
-import img1 from "@/app/@resources/img/Chaplin.jpg";
-import img2 from "@/app/@resources/img/Portrait.jpg";
+import img1 from "@/app/resources/img/Chaplin.jpg";
+import img2 from "@/app/resources/img/Portrait.jpg";
 
 const paintingArry = [
   {

@@ -1,17 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-// import fb from "@/app/@resources/icons/fb.png";
-// import insta from "@/app/@resources/icons/Insta.png";
-// import gamil from "@/app/@resources/icons/Gmail.png";
-// import youtube from "@/app/@resources/icons/Youtube.png";
-// import linkedInd from "@/app/@resources/icons/Linked in.png";
-import fb from "@/app/@resources/icons/fba.png";
-import insta from "@/app/@resources/icons/instaa.png";
-import gamil from "@/app/@resources/icons/gm.png";
-import youtube from "@/app/@resources/icons/yt.png";
-import linkedInd from "@/app/@resources/icons/lik.png";
+// import fb from "@/app/resources/icons/fb.png";
+// import insta from "@/app/resources/icons/Insta.png";
+// import gamil from "@/app/resources/icons/Gmail.png";
+// import youtube from "@/app/resources/icons/Youtube.png";
+// import linkedInd from "@/app/resources/icons/Linked in.png";
+import fb from "@/app/resources/icons/fba.png";
+import insta from "@/app/resources/icons/instaa.png";
+import gamil from "@/app/resources/icons/gm.png";
+import youtube from "@/app/resources/icons/yt.png";
+import linkedInd from "@/app/resources/icons/lik.png";
 import Image from "next/image";
-import pic from "@/app/@resources/img/pic2.jpg";
+import pic from "@/app/resources/img/pic2.jpg";
 
 function About() {
   return (

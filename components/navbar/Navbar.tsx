@@ -2,11 +2,11 @@
 import Image from "next/image";
 import React from "react";
 // import { FaFacebook,FaInstagram, FaRegEnvelope,FaLinkedinIn,FaYoutube } from 'react-icons/fa';
-import fb from "@/app/@resources/icons/fba.png";
-import insta from "@/app/@resources/icons/instaa.png";
-import gamil from "@/app/@resources/icons/gm.png";
-import youtube from "@/app/@resources/icons/yt.png";
-import linkedInd from "@/app/@resources/icons/lik.png";
+import fb from "@/app/resources/icons/fba.png";
+import insta from "@/app/resources/icons/instaa.png";
+import gamil from "@/app/resources/icons/gm.png";
+import youtube from "@/app/resources/icons/yt.png";
+import linkedInd from "@/app/resources/icons/lik.png";
 import Link from "next/link";
 import { AnyAaaaRecord } from "dns";
 

@@ -6,25 +6,25 @@ import Contact from "./contact/Contact";
 import About from "./about/page";
 import Service from "./service/page";
 
-import fb from "@/app/@resources/icons/fb.png";
-import insta from "@/app/@resources/icons/Insta.png";
-import gamil from "@/app/@resources/icons/Gmail.png";
-import youtube from "@/app/@resources/icons/Youtube.png";
-import linkedInd from "@/app/@resources/icons/Linked in.png";
-import phone from "@/app/@resources/icons/Phone.png";
-import share from "@/app/@resources/icons/Share.png";
-import dloc from "@/app/@resources/icons/Direction.png";
-import location from "@/app/@resources/icons/location.png";
-import india from "@/app/@resources/icons/India.png";
-import fShadow from "@/app/@resources/img/fShadow.png";
-import backGround from "@/app/@resources/img/back.jpeg";
+import fb from "@/app/resources/icons/fb.png";
+import insta from "@/app/resources/icons/Insta.png";
+import gamil from "@/app/resources/icons/Gmail.png";
+import youtube from "@/app/resources/icons/Youtube.png";
+import linkedInd from "@/app/resources/icons/Linked in.png";
+import phone from "@/app/resources/icons/Phone.png";
+import share from "@/app/resources/icons/Share.png";
+import dloc from "@/app/resources/icons/Direction.png";
+import location from "@/app/resources/icons/location.png";
+import india from "@/app/resources/icons/India.png";
+import fShadow from "@/app/resources/img/fShadow.png";
+import backGround from "@/app/resources/img/back.jpeg";
 import { Suspense } from "react";
 
-import fbw from "@/app/@resources/icons/Facebook w.png";
-import instaw from "@/app/@resources/icons/Insta w.png";
-import gamilw from "@/app/@resources/icons/Facebook w-1.png";
-import youtubew from "@/app/@resources/icons/Youtube w.png";
-import linkedIndw from "@/app/@resources/icons/Linked in w.png";
+import fbw from "@/app/resources/icons/Facebook w.png";
+import instaw from "@/app/resources/icons/Insta w.png";
+import gamilw from "@/app/resources/icons/Facebook w-1.png";
+import youtubew from "@/app/resources/icons/Youtube w.png";
+import linkedIndw from "@/app/resources/icons/Linked in w.png";
 
 export default function Home() {
   const [imgReq, setImgReq] = React.useState(null);
@@ -45,12 +45,12 @@ export default function Home() {
             width="100%"
             // height="100%"
             style={{ width: "100vw" }}
-            src={require("@/app/@resources/video/Art_3.mp4")}
+            src={require("@/app/resources/video/Art_3.mp4")}
             autoPlay
             loop={true}
             muted={true}
           >
-            {/* <source src={require("@/app/@resources/video/Art.mp4")} type="video/mp4" /> */}
+            {/* <source src={require("@/app/resources/video/Art.mp4")} type="video/mp4" /> */}
           </video>
           {/* <VideoPlayer /> */}
         </Suspense>
