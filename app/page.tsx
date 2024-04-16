@@ -6,17 +6,11 @@ import Contact from "./contact/Contact";
 import About from "./about/page";
 import Service from "./service/page";
 
-import fb from "@/app/resources/icons/fb.png";
-import insta from "@/app/resources/icons/Insta.png";
-import gamil from "@/app/resources/icons/Gmail.png";
-import youtube from "@/app/resources/icons/Youtube.png";
-import linkedInd from "@/app/resources/icons/Linked in.png";
 import phone from "@/app/resources/icons/Phone.png";
 import share from "@/app/resources/icons/Share.png";
 import dloc from "@/app/resources/icons/Direction.png";
-import location from "@/app/resources/icons/location.png";
 import india from "@/app/resources/icons/India.png";
-import fShadow from "@/app/resources/img/fShadow.png";
+import fShadow from "@/app/resources/img/fshadow.png";
 import backGround from "@/app/resources/img/back.jpeg";
 import { Suspense } from "react";
 
