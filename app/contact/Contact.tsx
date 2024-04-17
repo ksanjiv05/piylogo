@@ -163,6 +163,7 @@ function Contact({ imgReq }: ContactProps) {
                 type="radio"
                 name="purpose"
                 value="service"
+                onChange={onChange}
                 className="text-white font-lato w-6 h-8 "
               />
               <label className=" text-white font-lato text-xl mx-2">
@@ -174,6 +175,8 @@ function Contact({ imgReq }: ContactProps) {
                 type="radio"
                 name="purpose"
                 value="service"
+                onChange={onChange}
+
                 className="text-white font-lato w-6 h-8 "
               />
               <label className=" text-white font-lato text-xl mx-2">
@@ -185,6 +188,8 @@ function Contact({ imgReq }: ContactProps) {
                 type="radio"
                 name="purpose"
                 value="service"
+                onChange={onChange}
+
                 className="text-white font-lato w-6 h-8 "
               />
               <label className=" text-white font-lato text-xl mx-2">
