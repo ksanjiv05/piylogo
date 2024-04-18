@@ -10,17 +10,17 @@ const paintingArry = [
   {
     id: 1,
     src: img1,
-    alt: "Chaplin",
-    name: "Chaplin",
+    alt: "The Charlie Chaplin",
+    name: "The Charlie Chaplin",
     description: "Acrylic ( 24 Inch x 30 Inch )",
     type: 1,
   },
   {
     id: 2,
     src: img2,
-    alt: "Portrait",
-    name: "Portrait",
-    description: "",
+    alt: "Order Custom Portraits",
+    name: "Order Custom Portraits",
+    description: "Oil on Canvas",
     type: 2,
   },
  
