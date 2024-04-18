@@ -12,6 +12,7 @@ const paintingArry = [
     src: img1,
     alt: "Chaplin",
     name: "Chaplin",
+    description: "Acrylic ( 24 Inch x 30 Inch )",
     type: 1,
   },
   {
@@ -19,6 +20,7 @@ const paintingArry = [
     src: img2,
     alt: "Portrait",
     name: "Portrait",
+    description: "",
     type: 2,
   },
  
@@ -128,7 +130,7 @@ function Gallery({setImgReq}) {
                   <h2 className=" capitalize font-ebg text-2xl text-slate-600">
                     {painting.name}
                   </h2>
-                  <p className=" font-lato">description</p>
+                  <p className=" font-lato">{painting.description}</p>
                 </div>
                 <div>
                   <div onClick={()=>goToSection(painting,"#contact")} className="  w-44 py-2 rounded-full bg-[#445975] uppercase text-xl text-white font-lato cursor-pointer text-center">

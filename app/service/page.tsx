@@ -13,6 +13,16 @@ function Service() {
   //   }, 1000);
   //   return () => clearInterval(id);
   // }, []);
+    const goToSection = (id: any) => {
+    if (document.querySelector(id)) {
+      console.log(id);
+      document
+        .querySelector(id)
+        .scrollIntoView({ behavior: "smooth", marginTop: 400 });
+      // document.querySelector(id).scrollTo({ top: 200,behavior: "smooth" })
+      // window&&window.scrollBy(0, -300);
+    }
+  };
   return (
     <div className=" overflow-hidden ">
       <Image src={img}  className="w-[76vw] h-[55vw]  " style={{position:"absolute", }} />
@@ -47,7 +57,9 @@ function Service() {
                 Handicraft
               </li>
               <br />
-              <li className="py-2 bg-white rounded-full font-bold uppercase text-black w-[100px] font-lato text-center">
+              <li
+              onClick={() => goToSection("#contact")}
+              className="py-2 bg-white rounded-full font-bold uppercase text-black w-[100px] font-lato text-center cursor-pointer">
                 Contact 
               </li>
             </ul>
