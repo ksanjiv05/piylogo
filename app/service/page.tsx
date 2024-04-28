@@ -18,7 +18,7 @@ function Service() {
       }
       setImg(listOfImages[currentImage]);
       setCurrentImage((currentImage + 1) % listOfImages.length);
-    }, 2000);
+    }, 4000);
 
     return () => clearInterval(id);
   });
@@ -35,7 +35,7 @@ function Service() {
   };
   return (
     <div className=" overflow-hidden " onMouseOver={() => setIsPaused(true)} onMouseOut={() => setIsPaused(false)}>
-      <Image src={img} alt="image" className="w-[76vw] h-[55vw]  " style={{position:"absolute", }} />
+      <Image src={img} alt="image" className={`w-[76vw] h-[55vw] transition-all duration-300 ${!isPaused ? 'animate-slider' : ''}`} style={{position:"absolute", }} />
       <div className="w-full h-[55vw] py-[4vw] overflow-hidden" >
         <div className=" h-[47vw] w-[50vw]  flex overflow-hidden bg-black -ml-[28vw] opacity-80 rounded-full">
           <div className="flex-1 opacity-30 z-20"></div>

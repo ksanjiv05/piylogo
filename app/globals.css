@@ -31,3 +31,20 @@ body {
     text-wrap: balance;
   }
 } */
+
+.animate-slider {
+  animation: slider 4s linear infinite;
+  animation-delay: 4s;
+}
+
+@keyframes slider {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
