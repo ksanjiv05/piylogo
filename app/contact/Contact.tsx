@@ -75,7 +75,7 @@ function Contact({ imgReq }: ContactProps) {
       console.log(imgReq);
       setData({
         ...data,
-        message: ` I want to buy this painting " ${imgReq.name} - ${imgReq.id} "`,
+        message: `${imgReq.type==2?"I want to order a custom painting":"I want to buy this painting"} " ${imgReq.name} - ${imgReq.id} "`,
       });
     }
   }, [imgReq]);

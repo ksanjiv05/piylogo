@@ -4,15 +4,25 @@ import Image from "next/image";
 import a1 from "@/app/resources/img/PortraitPainitng.jpg";
 import a2 from "@/app/resources/img/Modernart.jpg";
 
-
 function Service() {
   const [img, setImg] = React.useState(a1);
-  // React.useEffect(() => {
-  //   const id = setInterval(() => {
-  //     setImg(a1===img?a2:a1);
-  //   }, 1000);
-  //   return () => clearInterval(id);
-  // }, []);
+  const [isPaused, setIsPaused] = React.useState(false);
+  const [currentImage, setCurrentImage] = React.useState(0);
+
+  const listOfImages = [a1, a2];
+
+  React.useEffect(() => {
+    const id = setInterval(() => {
+      if (isPaused) {
+        return;
+      }
+      setImg(listOfImages[currentImage]);
+      setCurrentImage((currentImage + 1) % listOfImages.length);
+    }, 2000);
+
+    return () => clearInterval(id);
+  });
+  
     const goToSection = (id: any) => {
     if (document.querySelector(id)) {
       console.log(id);
@@ -24,9 +34,9 @@ function Service() {
     }
   };
   return (
-    <div className=" overflow-hidden ">
-      <Image src={img}  className="w-[76vw] h-[55vw]  " style={{position:"absolute", }} />
-      <div className="w-full h-[55vw] py-[4vw] overflow-hidden    ">
+    <div className=" overflow-hidden " onMouseOver={() => setIsPaused(true)} onMouseOut={() => setIsPaused(false)}>
+      <Image src={img} alt="image" className="w-[76vw] h-[55vw]  " style={{position:"absolute", }} />
+      <div className="w-full h-[55vw] py-[4vw] overflow-hidden" >
         <div className=" h-[47vw] w-[50vw]  flex overflow-hidden bg-black -ml-[28vw] opacity-80 rounded-full">
           <div className="flex-1 opacity-30 z-20"></div>
           <div className="w-[19vw] flex  flex-col justify-center">
@@ -64,7 +74,7 @@ function Service() {
               </li>
             </ul>
           </div>
-        </div>ß
+        </div>
       </div>
     </div>
   );
