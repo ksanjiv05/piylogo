@@ -35,41 +35,38 @@ function Service() {
   };
   return (
     <div className=" overflow-hidden " onMouseOver={() => setIsPaused(true)} onMouseOut={() => setIsPaused(false)}>
-      <Image src={img} alt="image" className={`w-[76vw] h-[55vw] transition-all duration-300 ${!isPaused ? 'animate-slider' : ''}`} style={{position:"absolute", }} />
-      <div className="w-full h-[55vw] py-[4vw] overflow-hidden" >
-        <div className=" h-[47vw] w-[50vw]  flex overflow-hidden bg-black -ml-[28vw] opacity-80 rounded-full">
+      <Image src={img} alt="image" className={`md:w-[76vw] w-[88vw] md:h-[55vw] h-[65vw] transition-all duration-300 ${!isPaused ? 'animate-slider' : ''}`} style={{position:"absolute", }} />
+      <div className="w-full md:h-[55vw] h-[65vw] py-[4vw] overflow-hidden" >
+        <div className=" md:h-[47vw] h-[58vw] md:w-[50vw] w-[57vw]  flex overflow-hidden md:bg-black md:-ml-[28vw] -ml-[20vw] opacity-80 md:rounded-full">
           <div className="flex-1 opacity-30 z-20"></div>
-          <div className="w-[19vw] flex  flex-col justify-center">
-            <h1 className=" text-5xl font-bold text-white font-ebg">
+          <div className="md:w-[19vw] w-[31vw] flex  flex-col justify-center">
+            <h1 className=" md:text-5xl text-xl font-bold text-white font-ebg">
               Services
             </h1>
-            {/* <p className=" text-white font-ebg uppercase text-[20px]">
-              Painting & Acrlyic
-            </p> */}
-            <br />
-            <ul className=" text-white">
-              <li onClick={()=>setImg(a1)} onMouseOver={()=>setImg(a1)} className=" text-[20px] font-lato my-[8px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
+            {/* <br /> */}
+            <ul className=" text-white md:mt-8 mt-3">
+              <li onClick={()=>setImg(a1)} onMouseOver={()=>setImg(a1)} className=" md:text-[20px] text-[12px] font-lato md:my-[8px]  hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
                 Portrait Painting
               </li>
-              <li className=" text-[20px] font-lato my-[8px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
+              <li className=" md:text-[20px] text-[12px] font-lato md:my-[8px] my-[4px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
                 Fantasy Painting
               </li>
-              <li className=" text-[20px] font-lato my-[8px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
+              <li className=" md:text-[20px] text-[12px] font-lato md:my-[8px] my-[4px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
                 Gods & Goddess
               </li>
-              <li onClick={()=>setImg(a2)} onMouseOver={()=>setImg(a2)} className=" text-[20px] font-lato my-[8px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
+              <li onClick={()=>setImg(a2)} onMouseOver={()=>setImg(a2)} className=" md:text-[20px] text-[12px] font-lato md:my-[8px] my-[4px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
                 Modern Art
               </li>
-               <li className=" text-[20px] font-lato my-[8px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
+               <li className=" md:text-[20px] text-[12px] font-lato md:my-[8px] my-[4px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
                 Installation Art
               </li>
-              <li className=" text-[20px] font-lato my-[8px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
+              <li className=" md:text-[20px] text-[12px] font-lato md:my-[8px] my-[4px] hover:border-l-2 hover:pl-4 hover:transition hover:ease-in-out">
                 Handicraft
               </li>
-              <br />
+              {/* <br /> */}
               <li
               onClick={() => goToSection("#contact")}
-              className="py-2 bg-white rounded-full font-bold uppercase text-black w-[100px] font-lato text-center cursor-pointer">
+              className="md:mt-8 mt-3 md:py-2 py-[6px]  md:text-[18px] text-[12px] bg-white rounded-full font-bold uppercase text-black md:w-[120px] w-[90px] font-lato text-center cursor-pointer">
                 Contact 
               </li>
             </ul>

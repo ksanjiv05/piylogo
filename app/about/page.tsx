@@ -15,8 +15,8 @@ import pic from "@/app/resources/img/pic2.jpg";
 
 function About() {
   return (
-    <div className="grid grid-cols-2 gap-4 ">
-      <div className="h-[34vw] w-[34vw] ">
+    <div className="md:grid grid-cols-2 gap-4 ">
+      <div className="md:h-[34vw] md:w-[34vw] ">
         <Image
           src={pic}
           alt="arrow-right"
@@ -25,7 +25,7 @@ function About() {
           className=" h-full w-full"
         />
       </div>
-      <div className="h-[34vw]   px-8">
+      <div className="md:h-[34vw]   px-8">
         <h1 className=" text-5xl font-bold py-[40px] font-ebg">
           Piyush Gupta{" "}
         </h1>

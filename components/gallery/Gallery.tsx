@@ -51,7 +51,7 @@ function Gallery({setImgReq}) {
   return (
     <>
       <Dialog open={open} setOpen={setOpen} image={image} />
-      <div className="grid grid-cols-2 gap-[24px] ">
+      <div className="md:grid grid-cols-2 gap-[24px] ">
         {/* <div className="h-[36vw] rounded-2xl relative group overflow-hidden shadow-lg">
           <div
             className="h-[36vw] overflow-hidden"
@@ -111,10 +111,10 @@ function Gallery({setImgReq}) {
           paintingArry.map((painting) => (
             <div
               key={painting.id}
-              className="h-[36vw] rounded-2xl relative group overflow-hidden shadow-lg"
+              className="my-4 h-[60vh] md:h-[36vw] rounded-2xl relative group overflow-hidden shadow-lg"
             >
               <div
-                className="h-[36vw] overflow-hidden"
+                className="h-[60vh] md:h-[36vw] overflow-hidden"
                 onClick={() => handleDialog(painting.src)}
               >
                 <Image
@@ -122,18 +122,18 @@ function Gallery({setImgReq}) {
                   alt={painting.alt}
                   objectFit="cover"
                   fill="cover"
-                  className="h-[36vw] w-full"
+                  className="md:h-[36vw] w-full"
                 />
               </div>
-              <div className="h-[6vw] bg-white absolute w-full flex -bottom-[6vw] transition-all duration-300 ease-linear group-hover:bottom-0 items-center justify-between p-4">
+              <div className="md:h-[6vw] h-[18vh] bg-white absolute w-full flex md:flex-row flex-col -bottom-[6vw]  transition-all duration-300 ease-linear group-hover:bottom-0 items-center md:justify-between p-4">
                 <div>
-                  <h2 className=" capitalize font-ebg text-2xl text-slate-600">
+                  <h2 className=" capitalize font-ebg md:text-2xl text-xl text-slate-600">
                     {painting.name}
                   </h2>
                   <p className=" font-lato">{painting.description}</p>
                 </div>
                 <div>
-                  <div onClick={()=>goToSection(painting,"#contact")} className="  w-44 py-2 rounded-full bg-[#445975] uppercase text-xl text-white font-lato cursor-pointer text-center">
+                  <div onClick={()=>goToSection(painting,"#contact")} className="md:mt-0 mt-2  w-44 py-2 rounded-full bg-[#445975] uppercase text-xl text-white font-lato cursor-pointer text-center">
                     {painting.type === 1 ? "Buy" : "Custom Art"}
                   </div>
                 </div>

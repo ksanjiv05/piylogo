@@ -9,6 +9,8 @@ import youtube from "@/app/resources/icons/yt.png";
 import linkedInd from "@/app/resources/icons/lik.png";
 import Link from "next/link";
 import { AnyAaaaRecord } from "dns";
+import { FiAlignRight,FiX } from "react-icons/fi";
+
 
 function Navbar() {
   const goToSection = (id: any) => {
@@ -23,13 +25,19 @@ function Navbar() {
   };
 
   React.useEffect(() => {}, []);
-
+const [open,setOpen]=React.useState(false)
   return (
     <div className="sticky top-0 bg-white  z-[1]">
       <div className="flex h-[8vh] items-end  justify-center">
         <h1 className=" text-3xl uppercase font-lato font-bold">Piy</h1>
       </div>
-      <div className="grid grid-cols-3 gap-2 mt-2 pb-4 px-6 place">
+      <div className="h-8">
+      <div className="md:hidden absolute right-1 float-right h-8">
+        <button onClick={()=>setOpen(!open)}>{open?<FiX size={25} />:<FiAlignRight size={25} />}
+</button>
+      </div>
+      </div>
+      <div className={`md:grid grid-cols-3 gap-2 mt-2 pb-4 px-6 place flex flex-col justify-center items-center ${open?"":"hidden"}`}>
         <div className="mt-2">
           <div className="flex items-center justify-start">
             <div className="">
@@ -58,25 +66,11 @@ function Navbar() {
                 <Image className="w-6" src={linkedInd} title="linkedin" />
               </a>
             </div>
-            {/* <div className="mx-2">
-            <FaFacebook size={28} className=" text-slate-500"/>
-          </div>
-          <div className="mx-2">
-           <FaInstagram   size={28} className=" text-slate-500"/>
-          </div>
-          <div className="mx-2">
-            <FaRegEnvelope  size={28} className=" text-slate-500" />
-          </div>
-          <div className="mx-2">
-            <FaLinkedinIn  size={28} className=" text-slate-500" />
-          </div>
-          <div className="mx-2">
-            <FaYoutube  size={28} className=" text-slate-500" />
-          </div> */}
+            
           </div>
         </div>
-        <div className="mt-2">
-          <div className="flex items-center justify-center">
+        <div className="mt-2 ">
+          <div className="flex flex-col md:flex-row items-center justify-center">
             <div
               onClick={() => goToSection("#gallary")}
               className="mx-3 uppercase font-bold font-lato cursor-pointer "

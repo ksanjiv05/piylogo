@@ -112,12 +112,12 @@ function Contact({ imgReq }: ContactProps) {
       </div>
 
       <div
-        className="w-full h-[55vw] relative overflow-hidden  flex flex-col items-center justify-center  "
+        className="w-full md:h-[55vw] h-[70vh] relative overflow-hidden  flex flex-col items-center justify-center  "
         style={{ justifyContent: "center" }}
       >
-        <Image src={blur} className="h-[55vw]  absolute -z-10" />
-        <div className=" w-[55%] p-12 ">
-          <h1 className=" text-white text-5xl mb-[36px] font-ebg font-semibold">
+        <Image src={blur} className="md:h-[55vw] h-[70vh]  absolute -z-10" alt={""} />
+        <div className=" md:w-[55%]  md:p-12 p-8 ">
+          <h1 className=" text-white md:text-5xl text-3xl md:mb-[36px] mb-[10px] font-ebg font-semibold">
             Contact
           </h1>
 
@@ -127,11 +127,11 @@ function Contact({ imgReq }: ContactProps) {
             type="text"
             name="name"
             onChange={onChange}
-            className="w-[100%] px-2 h-10"
+            className="w-[100%] px-2 h-10 md:mb-6 mb-2"
             value={data?.name}
           />
-          <br />
-          <br />
+          {/* <br />
+          <br /> */}
 
           <label className="  text-white font-lato">Phone Number*</label>
           <br />
@@ -139,22 +139,22 @@ function Contact({ imgReq }: ContactProps) {
             type="text"
             name="phone"
             onChange={onChange}
-            className="w-[100%] px-2 h-10"
+            className="w-[100%] px-2 h-10 md:mb-6 mb-2"
             value={data?.phone}
           />
-          <br />
-          <br />
+          {/* <br />
+          <br /> */}
           <label className=" text-white font-lato">Email*</label>
           <br />
           <input
             type="text"
             name="email"
             onChange={onChange}
-            className="w-[100%] px-2 h-10"
+            className="w-[100%] px-2 h-10 md:mb-6 mb-2"
             value={data?.email}
           />
-          <br />
-          <br />
+          {/* <br />
+          <br /> */}
           <label className=" text-white font-lato">Purpose*</label>
           <br />
           <div className="flex h-8  items-center justify-between ">
@@ -166,7 +166,7 @@ function Contact({ imgReq }: ContactProps) {
                 onChange={onChange}
                 className="text-white font-lato w-6 h-8 "
               />
-              <label className=" text-white font-lato text-xl mx-2">
+              <label className=" text-white font-lato  md:text-xl text-[12px] mx-2">
                 Buy Art
               </label>
             </div>
@@ -179,7 +179,7 @@ function Contact({ imgReq }: ContactProps) {
 
                 className="text-white font-lato w-6 h-8 "
               />
-              <label className=" text-white font-lato text-xl mx-2">
+              <label className=" text-white font-lato  md:text-xl text-[12px] mx-2">
                 Custom Art
               </label>
             </div>
@@ -192,7 +192,7 @@ function Contact({ imgReq }: ContactProps) {
 
                 className="text-white font-lato w-6 h-8 "
               />
-              <label className=" text-white font-lato text-xl mx-2">
+              <label className=" text-white font-lato  md:text-xl text-[12px]  mx-2">
                 Inquire
               </label>
             </div>
