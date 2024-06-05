@@ -88,7 +88,7 @@ export default function Home() {
         <div
           id="contact"
           style={{ scrollMargin: "15vh" }}
-          className=" md:h-[55vw] h-[70vh] "
+          className=" md:h-[55vw] h-[92vh] "
         >
           <Contact imgReq={imgReq} />
         </div>

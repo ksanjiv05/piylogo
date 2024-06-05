@@ -21,6 +21,7 @@ function Contact({ imgReq }: ContactProps) {
     email: "",
     purpose: "",
     message: "",
+    address: "",
   });
   const [open, setOpen] = React.useState(false);
 
@@ -64,6 +65,7 @@ function Contact({ imgReq }: ContactProps) {
         email: "",
         purpose: "",
         message: "",
+        address: "",
       });
     } else {
       alert("Email not Sent");
@@ -75,7 +77,11 @@ function Contact({ imgReq }: ContactProps) {
       console.log(imgReq);
       setData({
         ...data,
-        message: `${imgReq.type==2?"I want to order a custom painting":"I want to buy this painting"} " ${imgReq.name} - ${imgReq.id} "`,
+        message: `${
+          imgReq.type == 2
+            ? "I want to order a custom painting"
+            : "I want to buy this painting"
+        } " ${imgReq.name} - ${imgReq.id} "`,
       });
     }
   }, [imgReq]);
@@ -90,8 +96,7 @@ function Contact({ imgReq }: ContactProps) {
       purpose: "",
       message: "",
     });
-  }
-
+  };
 
   return (
     <>
@@ -112,10 +117,14 @@ function Contact({ imgReq }: ContactProps) {
       </div>
 
       <div
-        className="w-full md:h-[55vw] h-[70vh] relative overflow-hidden  flex flex-col items-center justify-center  "
+        className="w-full md:h-[55vw] h-[92vh] relative overflow-hidden  flex flex-col items-center justify-center  "
         style={{ justifyContent: "center" }}
       >
-        <Image src={blur} className="md:h-[55vw] h-[70vh]  absolute -z-10" alt={""} />
+        <Image
+          src={blur}
+          className="md:h-[55vw] h-[92vh]  absolute -z-10"
+          alt={""}
+        />
         <div className=" md:w-[55%]  md:p-12 p-8 ">
           <h1 className=" text-white md:text-5xl text-3xl md:mb-[36px] mb-[10px] font-ebg font-semibold">
             Contact
@@ -176,7 +185,6 @@ function Contact({ imgReq }: ContactProps) {
                 name="purpose"
                 value="service"
                 onChange={onChange}
-
                 className="text-white font-lato w-6 h-8 "
               />
               <label className=" text-white font-lato  md:text-xl text-[12px] mx-2">
@@ -189,7 +197,6 @@ function Contact({ imgReq }: ContactProps) {
                 name="purpose"
                 value="service"
                 onChange={onChange}
-
                 className="text-white font-lato w-6 h-8 "
               />
               <label className=" text-white font-lato  md:text-xl text-[12px]  mx-2">
@@ -204,6 +211,18 @@ function Contact({ imgReq }: ContactProps) {
           <textarea
             rows={3}
             name="message"
+            onChange={onChange}
+            value={data?.message}
+            className="p-2 w-[100%]"
+          ></textarea>
+
+          <br />
+
+          <label className=" text-white font-lato">Address*</label>
+          <br />
+          <textarea
+            rows={3}
+            name="address"
             onChange={onChange}
             value={data?.message}
             className="p-2 w-[100%]"

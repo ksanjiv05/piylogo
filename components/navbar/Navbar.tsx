@@ -9,8 +9,7 @@ import youtube from "@/app/resources/icons/yt.png";
 import linkedInd from "@/app/resources/icons/lik.png";
 import Link from "next/link";
 import { AnyAaaaRecord } from "dns";
-import { FiAlignRight,FiX } from "react-icons/fi";
-
+import { FiAlignRight, FiX } from "react-icons/fi";
 
 function Navbar() {
   const goToSection = (id: any) => {
@@ -25,19 +24,24 @@ function Navbar() {
   };
 
   React.useEffect(() => {}, []);
-const [open,setOpen]=React.useState(false)
+  const [open, setOpen] = React.useState(false);
   return (
-    <div className="sticky top-0 bg-white  z-[1]">
-      <div className="flex h-[8vh] items-end  justify-center">
+    <div className="sticky top-0 bg-white flex  items-center md:block  z-[1]">
+      <div className="md:h-[8vh] my-2 md:my-0   flex flex-1 justify-end md:items-end  md:justify-center">
         <h1 className=" text-3xl uppercase font-lato font-bold">Piy</h1>
       </div>
-      <div className="h-8">
-      <div className="md:hidden absolute right-1 float-right h-8">
-        <button onClick={()=>setOpen(!open)}>{open?<FiX size={25} />:<FiAlignRight size={25} />}
-</button>
+      <div className="md:h-8  flex flex-1 ">
+        <div className="md:hidden h-8 flex flex-1 justify-end mr-1 ">
+          <button onClick={() => setOpen(!open)}>
+            {open ? <FiX size={25} /> : <FiAlignRight size={25} />}
+          </button>
+        </div>
       </div>
-      </div>
-      <div className={`md:grid grid-cols-3 gap-2 mt-2 pb-4 px-6 place flex flex-col justify-center items-center ${open?"":"hidden"}`}>
+      <div
+        className={`md:grid grid-cols-3 gap-2 mt-2 pb-4 px-6 place flex flex-col justify-center items-center ${
+          open ? "" : "hidden"
+        }`}
+      >
         <div className="mt-2">
           <div className="flex items-center justify-start">
             <div className="">
@@ -52,8 +56,7 @@ const [open,setOpen]=React.useState(false)
             </div>
             <div className="mx-2">
               <a href="mailto:piyartstudio@gmail.com">
-
-              <Image className="w-6" src={gamil} title="gmail" />
+                <Image className="w-6" src={gamil} title="gmail" />
               </a>
             </div>
             <div className="mx-1">
@@ -66,7 +69,6 @@ const [open,setOpen]=React.useState(false)
                 <Image className="w-6" src={linkedInd} title="linkedin" />
               </a>
             </div>
-            
           </div>
         </div>
         <div className="mt-2 ">
