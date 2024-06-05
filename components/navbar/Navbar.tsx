@@ -26,8 +26,9 @@ function Navbar() {
   React.useEffect(() => {}, []);
   const [open, setOpen] = React.useState(false);
   return (
-    <div className="sticky top-0 bg-white flex  items-center md:block  z-[1]">
-      <div className="md:h-[8vh] my-2 md:my-0   flex flex-1 justify-end md:items-end  md:justify-center">
+    <div className="sticky top-0 bg-white  md:block  z-[1]">
+      <div className="flex md:block items-center">
+      <div className="md:h-[8vh] my-2 -mr-16 md:-mr-0  md:my-0   flex flex-1 justify-end md:items-end  md:justify-center">
         <h1 className=" text-3xl uppercase font-lato font-bold">Piy</h1>
       </div>
       <div className="md:h-8  flex flex-1 ">
@@ -36,6 +37,7 @@ function Navbar() {
             {open ? <FiX size={25} /> : <FiAlignRight size={25} />}
           </button>
         </div>
+      </div>
       </div>
       <div
         className={`md:grid grid-cols-3 gap-2 mt-2 pb-4 px-6 place flex flex-col justify-center items-center ${
