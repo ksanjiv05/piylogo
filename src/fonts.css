@@ -1,0 +1,37 @@
+/* src/styles/fonts.css */
+/* @font-face {
+  font-family: "NunitoBold";
+  src: url("./assets/fonts/nunito-sans.bold.ttf") format("truetype");
+  font-weight: "bold";
+  font-style: normal;
+} */
+
+@layer base {
+  @font-face {
+    font-family: "Nunito";
+    src: url("./assets/fonts/Satoshi-Bold.ttf") format("truetype");
+    font-weight: 700; /* Bold weight */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Nunito";
+    src: url("./assets/fonts/nunito-sans.regular.ttf") format("truetype");
+    font-weight: 400; /* Regular weight */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Nunito";
+    src: url("./assets/fonts/nunito-sans.light.ttf") format("truetype");
+    font-weight: 300; /* Light weight */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Nunito";
+    src: url("./assets/fonts/Satoshi-Medium.ttf") format("truetype");
+    font-weight: 600; /* SemiBold weight */
+    font-style: normal;
+  }
+}
