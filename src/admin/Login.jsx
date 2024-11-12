@@ -1,5 +1,6 @@
 import axios from "axios";
 import { createSignal, createEffect } from "solid-js";
+import { API_URL } from "../config/config";
 
 const Login = () => {
   const [data, setData] = createSignal({
