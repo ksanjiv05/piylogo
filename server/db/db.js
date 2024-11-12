@@ -7,7 +7,7 @@ const connectDB = async () => {
     .connect(process.env.MONGO_URI)
     .then(() => {
       console.log("Connected to MongoDB");
-      run();
+      // run();
     })
     .catch((err) => console.log(err));
 };

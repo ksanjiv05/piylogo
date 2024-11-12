@@ -15,7 +15,7 @@ const Banner = () => {
           // controls
           // onEnded={() => setIsPlaying(false)}
         >
-          <source src={static_URL + "banner.mp4"} type="video/mp4" />
+          <source src={static_URL + "banner.MP4"} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
