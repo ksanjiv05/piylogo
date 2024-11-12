@@ -18,7 +18,7 @@ const Login = () => {
 
   const login = () => {
     axios
-      .post("http://localhost:4000/api/login", {
+      .post(`${API_URL}/login`, {
         email: data().username,
         password: data().password,
       })
