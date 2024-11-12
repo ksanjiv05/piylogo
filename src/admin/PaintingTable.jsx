@@ -37,7 +37,7 @@ const PaintingTable = () => {
     console.log(formData);
     setLoader(true);
     axios
-      .post(`${API_URL}/login/paintings`, formData, {
+      .post(`${API_URL}/paintings`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: "Bearer " + localStorage.getItem("token"),
@@ -57,7 +57,7 @@ const PaintingTable = () => {
 
   const getPaintings = () => {
     axios
-      .get(`${API_URL}/login/paintings`, {
+      .get(`${API_URL}/paintings`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -73,7 +73,7 @@ const PaintingTable = () => {
 
   const deletePainting = (id) => {
     axios
-      .delete(`${API_URL}/login/paintings/${id}`, {
+      .delete(`${API_URL}/paintings/${id}`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
