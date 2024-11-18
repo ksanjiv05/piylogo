@@ -7,7 +7,7 @@ const Contact = ({ painting }) => {
   const [data, setData] = createSignal({
     name: "",
     email: "",
-    purpose: "",
+    purpose: "buy art",
     message: "",
     phone: "",
     address: "",
@@ -27,15 +27,28 @@ const Contact = ({ painting }) => {
     console.log(data());
     setLoader(true);
     axios
-      .post(`${API_URL}/contact`, data(), {
-        // headers: {
-        //   "Content-Type": "multipart/form-data",
-        // },
-      })
+      .post(
+        `${API_URL}/contact`,
+        { painting: painting()?._id, ...data() },
+        {
+          // headers: {
+          //   "Content-Type": "multipart/form-data",
+          // },
+        }
+      )
       .then((res) => {
         console.log(res.data);
         setLoader(false);
         alert("Your message has been sent");
+        setData({
+          name: "",
+          email: "",
+          purpose: "buy art",
+          message: "",
+          phone: "",
+          address: "",
+          website: "",
+        });
       })
       .catch((err) => {
         console.log(err);
@@ -56,8 +69,10 @@ const Contact = ({ painting }) => {
     if (painting) {
       setData((prevData) => ({
         ...prevData,
-        name: painting().name,
-        message: `I want this art ${painting()._id} ${painting().description}`,
+        // name: painting().name,
+        message: `I would love to purchase this art piece titled, "${
+          painting().name
+        }"`,
       }));
     }
   });
@@ -93,6 +108,7 @@ const Contact = ({ painting }) => {
                 type="radio"
                 name="purpose"
                 //value="service"
+
                 value="buy art"
                 onChange={onChange}
                 className="text-white w-6 h-8 "
@@ -131,7 +147,7 @@ const Contact = ({ painting }) => {
           <br />
 
           <label className="  text-white float-left font-nunito">
-            Your Phone Number*
+            Your Phone Number
           </label>
           <br />
           <input
@@ -168,18 +184,21 @@ const Contact = ({ painting }) => {
           ></textarea>
 
           <br />
-
-          <label className=" text-white float-left font-nunito mt-4">
-            Your Address
-          </label>
-          <br />
-          <textarea
-            rows={3}
-            name="address"
-            onChange={onChange}
-            //value={data?.message}
-            className="p-2 w-[100%]"
-          ></textarea>
+          {data().purpose == "buy art" && (
+            <>
+              <label className=" text-white float-left font-nunito mt-4">
+                Your Address
+              </label>
+              <br />
+              <textarea
+                rows={3}
+                name="address"
+                onChange={onChange}
+                //value={data?.message}
+                className="p-2 w-[100%]"
+              ></textarea>
+            </>
+          )}
 
           <div
             onClick={handleSubmit}
@@ -187,7 +206,7 @@ const Contact = ({ painting }) => {
             className="  mt-[36px] py-[16px] px-[32px] bg-white hover:bg-blue-500 rounded-full cursor-pointer "
           >
             <p className=" uppercase  text-[24px] font-bold font-nunito">
-              {loader() ? "Sending..." : "Contact"}
+              {loader() ? "Sending..." : "Submit"}
             </p>
             {/* <Image src={dr} /> */}
           </div>

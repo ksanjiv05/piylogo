@@ -8,7 +8,6 @@ const paintingSchema = new mongoose.Schema(
     },
     phone: {
       type: String,
-      required: true,
     },
     purpose: {
       type: String,
@@ -20,11 +19,9 @@ const paintingSchema = new mongoose.Schema(
     },
     message: {
       type: String,
-      required: true,
     },
     address: {
       type: String,
-      required: true,
     },
     email: {
       type: String,

@@ -2,8 +2,16 @@ const Contact = require("../model/contact.model");
 
 exports.createContact = async (req, res) => {
   try {
-    const { name, email, message, phone, purpose, address } = req.body;
-    if (!name || !email || !message || !phone || !purpose || !address) {
+    const {
+      name,
+      email,
+      message = "",
+      phone = "",
+      purpose,
+      address = "",
+      painting = null,
+    } = req.body;
+    if (!name || !email || !message || !purpose) {
       return res.status(400).json({ message: "All fields are required" });
     }
     const contact = new Contact({
@@ -13,6 +21,7 @@ exports.createContact = async (req, res) => {
       phone,
       purpose,
       address,
+      painting,
     });
     await contact.save();
     console.log("message is saved", contact);

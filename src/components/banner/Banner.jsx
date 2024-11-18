@@ -3,7 +3,7 @@ import { API_URL, static_URL } from "../../config/config";
 import axios from "axios";
 const Banner = () => {
   return (
-    <div class="w-full h-[100vh]  ">
+    <div class="w-full h-[90vh]  mb-[30px]">
       <div class="w-full h-[90vh] rounded-[20px] mt-[30px] overflow-hidden ">
         <video
           // ref={videoRef}
