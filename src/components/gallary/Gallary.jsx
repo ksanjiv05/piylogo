@@ -25,6 +25,7 @@ const Gallery = ({ setPainting }) => {
     setPainting(painting);
     const contactSection = document.getElementById("contact");
     contactSection.scrollIntoView({ behavior: "smooth" });
+    setSelectedPainting(null);
   };
 
   return (
@@ -164,7 +165,10 @@ const Gallery = ({ setPainting }) => {
                         </button>
                       ) : (
                         <button
-                          onClick={() => scrollToContact(painting)}
+                          onClick={() => {
+                            scrollToContact(selectedPainting());
+                          }}
+                          data-modal-hide="default-modal"
                           class="bg-[#798595] mt-3 text-white text-[24px] px-[25px] py-[10px] uppercase font-bold rounded-full font-nunito"
                         >
                           Buy

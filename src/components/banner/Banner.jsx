@@ -10,7 +10,7 @@ const Banner = () => {
           // width="600"
           height={250}
           autoPlay
-          // muted
+          muted
           loop
           // controls
           // onEnded={() => setIsPlaying(false)}
