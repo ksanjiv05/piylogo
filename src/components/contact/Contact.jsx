@@ -25,6 +25,23 @@ const Contact = ({ painting }) => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
     console.log(data());
+
+    if (data().name.length < 3) {
+      alert("Name is required!");
+      return;
+    }
+    if (data().email.length < 3) {
+      alert("Email is required!");
+      return;
+    }
+
+    if (data().purpose == "buy art") {
+      if (data().address.length < 3) {
+        alert("Address is required!");
+        return;
+      }
+    }
+
     setLoader(true);
     axios
       .post(
@@ -108,7 +125,7 @@ const Contact = ({ painting }) => {
                 type="radio"
                 name="purpose"
                 //value="service"
-
+                checked
                 value="buy art"
                 onChange={onChange}
                 className="text-white w-6 h-8 "
