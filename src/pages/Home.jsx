@@ -15,7 +15,7 @@ function Home() {
     <div class="bg-[#ECEDEE]">
       {/* <div class="w-full h-[2px] bg-[#434343]" /> */}
       <Header />
-      <div class=" px-[80px]">
+      <div class=" md:px-[80px] px-4">
         {/* <div class="w-full flex items-center justify-center my-3">
           <h1 class=" uppercase text-[80px] ">piyush gupta studio</h1>
         </div> */}
@@ -24,8 +24,10 @@ function Home() {
         <Banner />
         <Gallery setPainting={setPainting} />
       </div>
+
       <Service />
       <About />
+
       <Contact painting={painting} />
     </div>
   );

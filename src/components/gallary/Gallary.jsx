@@ -30,7 +30,7 @@ const Gallery = ({ setPainting }) => {
 
   return (
     <div class="w-full ">
-      <div class="columns-2 gap-[30px]">
+      <div class="md:columns-2 columns-1 gap-[30px]">
         {paintings().length > 0 &&
           paintings().map((painting, i) => {
             if (i % 2 == 0) {
@@ -137,7 +137,7 @@ const Gallery = ({ setPainting }) => {
           <div class="relative">
             <div class="relative w-full bg-[#00000038] shadow ">
               <div class="flex items-center justify-center ">
-                <div class="flex">
+                <div class="md:flex hidden">
                   <div>
                     <img
                       // src="https://kotart.in/cdn/shop/products/Kotart-Floral-Canvas-Painting-Vibrant-Large-Canvas-Art-for-Wall-Decor.jpg?v=1697552467"
@@ -148,19 +148,19 @@ const Gallery = ({ setPainting }) => {
                   </div>
                   <div class="w-[350px] bg-black p-5 relative">
                     <div>
-                      <div class="text-[30px] font-bold text-gray-900 dark:text-white font-nunito capitalize">
+                      <div class="md:text-[30px] text-[16px] font-bold text-gray-900 dark:text-white font-nunito capitalize">
                         {selectedPainting().name}
                       </div>
 
-                      <p class="text-[16px] mt-3 dark:text-white font-nunito capitalize">
+                      <p class="md:text-[16px] text-[12px] mt-3 dark:text-white font-nunito capitalize">
                         {selectedPainting().description}
                       </p>
 
-                      <p class="text-[20px] mt-3 font-bold text-white ">
+                      <p class="md:text-[20px] text-[16px] mt-3 font-bold text-white ">
                         ₹ {selectedPainting().price}
                       </p>
                       {selectedPainting().tag.toLowerCase() == "sold" ? (
-                        <button class="bg-[#e2e2e2] mt-3 text-white text-[24px] px-[25px] py-[10px] uppercase font-bold rounded-full font-nunito">
+                        <button class="bg-[#e2e2e2] mt-3 text-white md:text-[24px] text-[16px] md:px-[25px] px-[16px] md:py-[10px] py-[8px] uppercase font-bold rounded-full font-nunito">
                           Sold
                         </button>
                       ) : (
@@ -169,7 +169,7 @@ const Gallery = ({ setPainting }) => {
                             scrollToContact(selectedPainting());
                           }}
                           data-modal-hide="default-modal"
-                          class="bg-[#798595] mt-3 text-white text-[24px] px-[25px] py-[10px] uppercase font-bold rounded-full font-nunito"
+                          class="bg-[#798595] mt-3 text-white md:text-[24px] text-[16px] md:px-[25px] px-[16px] md:py-[10px] py-[8px] uppercase font-bold rounded-full font-nunito"
                         >
                           Buy
                         </button>
@@ -198,6 +198,71 @@ const Gallery = ({ setPainting }) => {
                       </svg>
                       <span class="sr-only">Close modal</span>
                     </button>
+                  </div>
+                </div>
+
+                <div class="h-[100vh] bg-black md:hidden">
+                  <button
+                    type="button"
+                    class="  top-2 p-2 float-right text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                    data-modal-hide="default-modal"
+                    onClick={() => setSelectedPainting(null)}
+                  >
+                    <svg
+                      class="w-3 h-3"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 14 14"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                      />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                  </button>
+                  <div>
+                    <img
+                      // src="https://kotart.in/cdn/shop/products/Kotart-Floral-Canvas-Painting-Vibrant-Large-Canvas-Art-for-Wall-Decor.jpg?v=1697552467"
+                      src={`${static_URL}/${selectedPainting().image}`}
+                      alt="..."
+                      class="w-[100vw]"
+                    />
+                  </div>
+                  <div class=" bg-black p-5 relative">
+                    <div>
+                      <div class="text-[30px] font-bold text-gray-900 dark:text-white font-nunito capitalize">
+                        {selectedPainting().name}
+                      </div>
+
+                      <p class="text-[16px] mt-3 dark:text-white font-nunito capitalize">
+                        {selectedPainting().description}
+                      </p>
+
+                      <p class="text-[20px] mt-3 font-bold text-white ">
+                        ₹ {selectedPainting().price}
+                      </p>
+                    </div>
+
+                    {selectedPainting().tag.toLowerCase() == "sold" ? (
+                      <button class="bg-[#e2e2e2] mt-3 text-white text-[24px] px-[25px] py-[10px] uppercase font-bold rounded-full font-nunito">
+                        Sold
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => {
+                          scrollToContact(selectedPainting());
+                        }}
+                        data-modal-hide="default-modal"
+                        class="bg-[#798595]  mt-3 text-white text-[24px] px-[25px] w-[100%] uppercase font-bold rounded-full font-nunito"
+                      >
+                        Buy
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>

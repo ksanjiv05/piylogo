@@ -6,11 +6,13 @@ const Service = () => {
   return (
     <div
       id="services"
-      class="w-full mt-[80px] px-[80px] pb-[80px] pt-[55px] bg-white"
+      class="w-full md:mt-[80px] mt-[40px] md:px-[80px] pb-[80px] md:pt-[55px] pt-[40px] px-4  bg-white"
     >
-      <h1 class=" uppercase text-[64px] text-center font-nunito ">Services</h1>
+      <h1 class=" uppercase md:text-[64px] text-[32px] text-center mb-[20px] font-nunito ">
+        Services
+      </h1>
 
-      <div class="grid grid-cols-2 gap-[30px]">
+      <div class="grid md:grid-cols-2 gap-[30px]">
         <div class="rounded-[20px] pb-[30px] overflow-hidden">
           <img
             // class=" w-full h-[500px]  "
@@ -18,18 +20,18 @@ const Service = () => {
             style={{ height: "auto" }}
             src="public/assets/images/sb.jpeg"
           />
-          <div class="w-full    p-[30px]  bg-[#333333]  h-[100%]">
-            <h2 class="text-[40px] text-white font-bold font-nunito">
+          <div class="w-full    md:p-[30px] px-[30px] py-[15px]  bg-[#333333]  h-[100%]">
+            <h2 class="md:text-[40px] text-[32px] text-white font-bold font-nunito">
               Paintings
             </h2>
-            <p class="text-[18px] py-[16px] text-white font-nunito">
+            <p class="text-[18px] md:py-[16px] py-[16px] text-white font-nunito">
               "Bring your vision to life with bespoke artwork crafted to elevate
               your environment. Our painting services blend creativity with
               precision to create timeless pieces just for you."
             </p>
             <button
               onClick={scrollToContact}
-              class="bg-[#ffffff] mt-4 text-black text-[24px] px-[32px] py-[16px]  font-bold rounded-full font-nunito"
+              class="bg-[#ffffff] mt-4 text-black md:text-[24px] text-[20px] px-[32px] py-[16px]  font-bold rounded-full font-nunito"
             >
               Contact
             </button>
@@ -41,8 +43,8 @@ const Service = () => {
             style={{ height: "auto" }}
             src="public/assets/images/sa.jpeg"
           />
-          <div class="w-full    p-[30px]  h-[100%] bg-[#333333]">
-            <h2 class="text-[40px] text-white font-bold font-nunito">
+          <div class="w-full    md:p-[30px] px-[30px] py-[15px]  h-[100%] bg-[#333333]">
+            <h2 class="md:text-[40px] text-[32px] text-white font-bold font-nunito">
               Spatial Art
             </h2>
             <p class="text-[18px] py-[16px] text-white font-nunito">
@@ -53,7 +55,7 @@ const Service = () => {
             </p>
             <button
               onClick={scrollToContact}
-              class="bg-[#ffffff] mt-4 text-black text-[24px] px-[32px] py-[16px]  font-bold rounded-full font-nunito"
+              class="bg-[#ffffff] mt-4 text-black  md:text-[24px] text-[20px] px-[32px] py-[16px]  font-bold rounded-full font-nunito"
             >
               Contact
             </button>

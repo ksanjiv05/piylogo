@@ -95,30 +95,28 @@ const Contact = ({ painting }) => {
   });
 
   return (
-    <div id="contact" class="w-full  p-[80px] bg-[#252525]">
+    <div id="contact" class="w-full  md:p-[80px] bg-[#252525]">
       <center>
         <div className=" md:w-[55%]  md:p-12 p-8 ">
-          <h1 className=" text-white md:text-5xl text-[48px] md:mb-[36px] mb-[10px] uppercase text-center font-nunito">
+          <h1 className=" text-white md:text-5xl md:text-[48px] text-[24px] md:mb-[36px] mb-[10px] uppercase text-center font-nunito">
             Contact
           </h1>
 
           <label className=" text-white float-left font-nunito">
             Your Name*
           </label>
-          <br />
           <input
             type="text"
             name="name"
             onChange={onChange}
-            className="w-[100%] px-2 h-10 md:mb-6 mb-2"
+            className="w-[100%] px-2 rounded-[66px] md:rounded-[0px] bg-transparent md:bg-white border-[1px] border-[#3e3b3b] md:border-0 h-10 md:mb-6 mb-2"
             value={data()?.name}
           />
 
-          <label className=" text-white float-left font-nunito">
-            Your Purpose*
-          </label>
+          <label className=" text-white float-left font-nunito">Purpose*</label>
           <br />
           <br />
+
           <div className="flex h-8  items-center justify-between ">
             <div className="flex items-center justify-center">
               <input
@@ -161,50 +159,45 @@ const Contact = ({ painting }) => {
               </label>
             </div>
           </div>
-          <br />
 
-          <label className="  text-white float-left font-nunito">
-            Your Phone Number
+          <label className=" md:mt-[20px] mt-[8px] text-white float-left font-nunito">
+            Phone Number
           </label>
           <br />
           <input
             type="text"
             name="phone"
             onChange={onChange}
-            className="w-[100%] px-2 h-10 md:mb-6 mb-2"
+            className="w-[100%] px-2 rounded-[66px] md:rounded-[0px] bg-transparent md:bg-white border-[1px] border-[#3e3b3b] md:border-0 h-10 md:mb-6 mb-2"
             //value={data?.phone}
           />
           {/* <br />
           <br /> */}
-          <label className=" text-white float-left font-nunito">
-            Your Email*
-          </label>
+          <label className=" text-white float-left font-nunito">Email*</label>
           <br />
           <input
             type="text"
             name="email"
             onChange={onChange}
-            className="w-[100%] px-2 h-10 md:mb-6 mb-2"
+            className="w-[100%] px-2 rounded-[66px] md:rounded-[0px] bg-transparent md:bg-white border-[1px] border-[#3e3b3b] md:border-0 h-10 md:mb-6 mb-2"
             //value={data?.email}
           />
 
-          <label className=" text-white float-left font-nunito">
-            Your Message*
-          </label>
+          <label className=" text-white float-left font-nunito">Message*</label>
           <br />
           <textarea
             rows={3}
             name="message"
             onChange={onChange}
             value={data()?.message}
-            className="p-2 w-[100%]"
+            className="p-2 rounded-[20px] md:rounded-[0px] bg-transparent md:bg-white border-[1px] border-[#3e3b3b] md:border-0 w-[100%]"
           ></textarea>
 
           <br />
           {data().purpose == "buy art" && (
             <>
-              <label className=" text-white float-left font-nunito mt-4">
-                Your Address
+              <label className=" text-white float-left font-nunito md:mt-4">
+                Your Address*
               </label>
               <br />
               <textarea
@@ -212,7 +205,7 @@ const Contact = ({ painting }) => {
                 name="address"
                 onChange={onChange}
                 //value={data?.message}
-                className="p-2 w-[100%]"
+                className="p-2 rounded-[20px] md:rounded-[0px] bg-transparent md:bg-white border-[1px] border-[#3e3b3b] md:border-0 w-[100%]"
               ></textarea>
             </>
           )}
@@ -222,7 +215,7 @@ const Contact = ({ painting }) => {
             disabled={loader()}
             className="  mt-[36px] py-[16px] px-[32px] bg-white hover:bg-blue-500 rounded-full cursor-pointer "
           >
-            <p className=" uppercase  text-[24px] font-bold font-nunito">
+            <p className=" uppercase  md:text-[24px] text-[20px] font-bold font-nunito">
               {loader() ? "Sending..." : "Submit"}
             </p>
             {/* <Image src={dr} /> */}
@@ -231,7 +224,7 @@ const Contact = ({ painting }) => {
       </center>
       <div class="w-full h-[2px] bg-[#434343]" />
 
-      <div class="mt-[40px] flex flex-row">
+      <div class="mt-[40px] hidden md:flex flex-row">
         <div class="w-full flex flex-row ">
           <a href="https://www.instagram.com/piy.art/">
             <img
@@ -289,6 +282,75 @@ const Contact = ({ painting }) => {
             <h2 class=" text-[24px] text-white font-nunito">Privacy Policy</h2>
           </div>
         </div>
+      </div>
+
+      <div class="mt-[40px]  md:hidden">
+        <div class="w-full flex  ">
+          <div class="w-full flex flex-row  items-center justify-center">
+            <a href="https://www.instagram.com/piy.art/">
+              <img
+                width={40}
+                class="mr-[16px]"
+                // height={40}
+                src="src/assets/icons/1.png"
+              />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100004291560400">
+              <img
+                width={40}
+                class="mr-[16px]"
+                // height={40}
+                src="src/assets/icons/2.png"
+              />
+            </a>
+            <a href="https://www.linkedin.com/company/piystudio/?viewAsMember=true">
+              <img
+                width={40}
+                class="mr-[16px]"
+                // height={40}
+                src="src/assets/icons/3.png"
+              />
+            </a>
+            <a href="https://x.com/PiyStudio">
+              <img
+                width={40}
+                class="mr-[16px]"
+                // height={40}
+                src="src/assets/icons/4.png"
+              />
+            </a>
+            <a href="https://www.youtube.com/@piystudio">
+              <img
+                width={40}
+                class="mr-[16px]"
+                // height={40}
+                src="src/assets/icons/5.png"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="mt-[40px] "></div>
+        <div class="w-full h-[2px] bg-[#434343]" />
+
+        <div class="mt-[40px] "></div>
+        <div class="flex items-center justify-center">
+          <div class="flex flex-row ">
+            <div class="border-r-[1px] px-4 border-[#434343] ">
+              <a href="mailto:piyushguptastudio@gmail.com">
+                <img src="src/assets/icons/mail.png" width={40} height={40} />
+              </a>
+            </div>
+            <div class="border-r-[1px] px-4 border-[#434343] ">
+              <img src="src/assets/icons/phone.png" width={40} height={40} />
+            </div>
+            <div class=" md:w-[230px] pl-4">
+              <h2 class=" text-[24px] text-white font-nunito">
+                Privacy Policy
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="pb-[40px] "></div>
       </div>
     </div>
   );
