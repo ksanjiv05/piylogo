@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div id="studio" class="w-full  md:p-[80px]">
+    <div id="studio" class="w-full scroll-m-20 md:scroll-m-2 md:p-[80px]">
       <div class="flex bg-white md:rounded-[20px] overflow-hidden">
         <div class="hidden md:block min-w-[540px]">
           <img src="public/assets/images/about.png" width={540} />

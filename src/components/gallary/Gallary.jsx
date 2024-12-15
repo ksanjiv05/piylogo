@@ -29,7 +29,7 @@ const Gallery = ({ setPainting }) => {
   };
 
   return (
-    <div class="w-full ">
+    <div class="w-full scroll-m-20 md:scroll-m-2 " id="works">
       <div class="md:columns-2 columns-1 gap-[30px]">
         {paintings().length > 0 &&
           paintings().map((painting, i) => {
@@ -58,13 +58,13 @@ const Gallery = ({ setPainting }) => {
                     </div>
                     <div>
                       {painting.tag.toLowerCase() == "sold" ? (
-                        <button class="bg-[#e2e2e2] text-white text-[24px] px-[32px] py-[16px] uppercase font-bold rounded-full font-nunito">
+                        <button class="bg-[#e2e2e2] text-white text-[24px] md:px-[32px] px-[16px] md:py-[16px] py-[8px] uppercase font-bold rounded-full font-nunito">
                           Sold
                         </button>
                       ) : (
                         <button
                           onClick={() => scrollToContact(painting)}
-                          class="bg-[#798595] text-white text-[24px] px-[32px] py-[16px] uppercase font-bold rounded-full font-nunito"
+                          class="bg-[#798595] text-white text-[24px] md:px-[32px] px-[16px] md:py-[16px] py-[8px] uppercase font-bold rounded-full font-nunito"
                         >
                           Buy
                         </button>
@@ -98,13 +98,13 @@ const Gallery = ({ setPainting }) => {
                   </div>
                   <div>
                     {painting.tag.toLowerCase() == "sold" ? (
-                      <button class="bg-[#e2e2e2] text-white text-[24px] px-[32px] py-[16px] uppercase font-bold rounded-full font-nunito">
+                      <button class="bg-[#e2e2e2] text-white text-[24px] md:px-[32px] px-[16px] md:py-[16px] py-[8px] uppercase font-bold rounded-full font-nunito">
                         Sold
                       </button>
                     ) : (
                       <button
                         onClick={() => scrollToContact(painting)}
-                        class="bg-[#798595] text-white text-[24px] px-[32px] py-[16px] uppercase font-bold rounded-full font-nunito"
+                        class="bg-[#798595] text-white text-[24px] md:px-[32px] px-[16px] md:py-[16px] py-[8px] uppercase font-bold rounded-full font-nunito"
                       >
                         Buy
                       </button>
@@ -135,7 +135,7 @@ const Gallery = ({ setPainting }) => {
           class=" overflow-y-hidden overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center  max-h-full"
         >
           <div class="relative">
-            <div class="relative w-full bg-[#00000038] shadow ">
+            <div class="relative w-full bg-[#0000009b] shadow ">
               <div class="flex items-center justify-center ">
                 <div class="md:flex hidden">
                   <div>
@@ -204,7 +204,7 @@ const Gallery = ({ setPainting }) => {
                 <div class="h-[100vh] bg-black md:hidden">
                   <button
                     type="button"
-                    class="  top-2 p-2 float-right text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                    class=" h-14 w-14  top-2 right-4 p-2 float-right text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm  ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
                     data-modal-hide="default-modal"
                     onClick={() => setSelectedPainting(null)}
                   >

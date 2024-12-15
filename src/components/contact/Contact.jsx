@@ -95,7 +95,10 @@ const Contact = ({ painting }) => {
   });
 
   return (
-    <div id="contact" class="w-full  md:p-[80px] bg-[#252525]">
+    <div
+      id="contact"
+      class="w-full scroll-m-20 md:scroll-m-2  md:p-[80px] bg-[#252525]"
+    >
       <center>
         <div className=" md:w-[55%]  md:p-12 p-8 ">
           <h1 className=" text-white md:text-5xl md:text-[48px] text-[24px] md:mb-[36px] mb-[10px] uppercase text-center font-nunito">
@@ -109,7 +112,7 @@ const Contact = ({ painting }) => {
             type="text"
             name="name"
             onChange={onChange}
-            className="w-[100%] px-2 rounded-[66px] md:rounded-[0px] bg-transparent md:bg-white border-[1px] border-[#3e3b3b] md:border-0 h-10 md:mb-6 mb-2"
+            className="w-[100%] text-white md:text-black px-2 rounded-[66px] md:rounded-[0px] bg-transparent md:bg-white border-[1px] border-[#3e3b3b] md:border-0 h-10 md:mb-6 mb-2"
             value={data()?.name}
           />
 
@@ -168,7 +171,7 @@ const Contact = ({ painting }) => {
             type="text"
             name="phone"
             onChange={onChange}
-            className="w-[100%] px-2 rounded-[66px] md:rounded-[0px] bg-transparent md:bg-white border-[1px] border-[#3e3b3b] md:border-0 h-10 md:mb-6 mb-2"
+            className="w-[100%] text-white md:text-black px-2 rounded-[66px] md:rounded-[0px] bg-transparent md:bg-white border-[1px] border-[#3e3b3b] md:border-0 h-10 md:mb-6 mb-2"
             //value={data?.phone}
           />
           {/* <br />
@@ -179,7 +182,7 @@ const Contact = ({ painting }) => {
             type="text"
             name="email"
             onChange={onChange}
-            className="w-[100%] px-2 rounded-[66px] md:rounded-[0px] bg-transparent md:bg-white border-[1px] border-[#3e3b3b] md:border-0 h-10 md:mb-6 mb-2"
+            className="w-[100%] text-white md:text-black px-2 rounded-[66px] md:rounded-[0px] bg-transparent md:bg-white border-[1px] border-[#3e3b3b] md:border-0 h-10 md:mb-6 mb-2"
             //value={data?.email}
           />
 
@@ -190,7 +193,7 @@ const Contact = ({ painting }) => {
             name="message"
             onChange={onChange}
             value={data()?.message}
-            className="p-2 rounded-[20px] md:rounded-[0px] bg-transparent md:bg-white border-[1px] border-[#3e3b3b] md:border-0 w-[100%]"
+            className="p-2 text-white md:text-black rounded-[20px] md:rounded-[0px] bg-transparent md:bg-white border-[1px] border-[#3e3b3b] md:border-0 w-[100%]"
           ></textarea>
 
           <br />
@@ -205,7 +208,7 @@ const Contact = ({ painting }) => {
                 name="address"
                 onChange={onChange}
                 //value={data?.message}
-                className="p-2 rounded-[20px] md:rounded-[0px] bg-transparent md:bg-white border-[1px] border-[#3e3b3b] md:border-0 w-[100%]"
+                className="p-2 text-white md:text-black rounded-[20px] md:rounded-[0px] bg-transparent md:bg-white border-[1px] border-[#3e3b3b] md:border-0 w-[100%]"
               ></textarea>
             </>
           )}

@@ -6,7 +6,7 @@ const Service = () => {
   return (
     <div
       id="services"
-      class="w-full md:mt-[80px] mt-[40px] md:px-[80px] pb-[80px] md:pt-[55px] pt-[40px] px-4  bg-white"
+      class="w-full scroll-m-20 md:scroll-m-2 md:mt-[80px] mt-[40px] md:px-[80px] pb-[80px] md:pt-[55px] pt-[40px] px-4  bg-white"
     >
       <h1 class=" uppercase md:text-[64px] text-[32px] text-center mb-[20px] font-nunito ">
         Services

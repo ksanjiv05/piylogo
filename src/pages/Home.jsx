@@ -19,7 +19,7 @@ function Home() {
         {/* <div class="w-full flex items-center justify-center my-3">
           <h1 class=" uppercase text-[80px] ">piyush gupta studio</h1>
         </div> */}
-        <div class="w-full h-[80px]  " id="works" />
+        <div class="w-full h-[80px]  " />
         <Intro />
         <Banner />
         <Gallery setPainting={setPainting} />
