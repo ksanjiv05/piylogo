@@ -43,12 +43,17 @@ const Gallery = ({ setPainting }) => {
                   />
                   <div class="w-full flex flex-row h-[120px] p-[16px]  bg-white">
                     <div class="flex-1">
-                      <h2 class="text-[20px] font-bold font-nunito text-[#5f5f5f]">
+                      <h2
+                        class="text-[20px] md:max-w-[420px] max-w-[220px] font-bold font-nunito text-[#5f5f5f]"
+                        style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;  "
+                        title={painting.name}
+                      >
                         {painting.name}
                       </h2>
                       <p
-                        class="text-[16px] font-nunito text-[#5f5f5f]"
-                        style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;  "
+                        class="text-[16px] md:max-w-[420px] max-w-[220px] font-nunito text-[#5f5f5f]"
+                        style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;  "
+                        title={painting.description}
                       >
                         {painting.description}
                       </p>
